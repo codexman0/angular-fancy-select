@@ -27,7 +27,7 @@ app.controller("MyController", function($scope) {
     $scope.selectedSport = {
     };
 
-    $scope.sportSelected = function(selectedSport){
+    $scope.sportChanged = function(selectedSport){
         $scope.selectedSport = selectedSport;
     }
 });
