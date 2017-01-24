@@ -25,8 +25,3 @@ app.controller("MyController", function($scope) {
     }];
     $scope.selectedSport = {};
 });
-
-app.run(function($rootScope) {
-
-});
-
