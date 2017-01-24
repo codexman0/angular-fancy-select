@@ -1,5 +1,16 @@
 var app = angular.module("fancyselect", []);
 
+/**
+ * fancyselect
+ * angular custom directive
+ * @params
+ * label: is the placeholder in the initial state
+ * dataset: is the json that the directive loops through.
+ * model: indicates currently selected item in json.
+ * uniqueKey : the key that is to identify the item in json.
+ * displayKey: the key that
+ * onChange: event handler that is fired when new item is selected in dropdown
+ */
 app.directive("fancyselect", ['$rootScope','$parse',function($rootScope,$parse) {
     return {
         restrict: "E",
@@ -11,7 +22,6 @@ app.directive("fancyselect", ['$rootScope','$parse',function($rootScope,$parse) 
             uniqueKey: "@",
             displayKey: "@",
             onChange: "&"
-//            transclude: true
         },
         link: function(scope,element,attrs) {
 
