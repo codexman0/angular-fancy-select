@@ -19,36 +19,38 @@ var app = angular.module("fancySelectExample", ['fancyselect']);
 In your controller, setup the select options and object to hold the selected value:
 
 ```js
+var app = angular.module("fancySelectExample", ['fancyselect']);
+
 app.controller("MyController", function($scope) {
     $scope.sportsList = [{
-            id : 0,
-            name: "Volleyball",
-            likes: 5
-        }, {
-            id: 1,
-            name: "Tennis",
-            likes:6
+        id : 0,
+        name: "Volleyball",
+        likes: 5
+    }, {
+        id: 1,
+        name: "Tennis",
+        likes:6
 
-        }, {
-            id:2,
-            name: "Swim",
-            likes:3
-        },{
-            id:4,
-            name: "Volleyball",
-            likes:10
-        },{
-            id:5,
-            name:"Wrestle",
-            likes:20
-        }];
+    }, {
+        id:2,
+        name: "Swim",
+        likes:3
+    },{
+        id:4,
+        name: "Volleyball",
+        likes:10
+    },{
+        id:5,
+        name:"Wrestle",
+        likes:20
+    }];
 
-        $scope.selectedSport = {
-        };
+    $scope.selectedSport = {
+    };
 
-        $scope.sportChanged = function(selectedSport){
-            $scope.selectedSport = selectedSport;
-        }
+    $scope.sportChanged = function(selectedSport){
+        $scope.selectedSport = selectedSport;
+    }
 });
 ```
 
@@ -62,14 +64,13 @@ app.controller("MyController", function($scope) {
     <fancyselect data-label="Select your favourite sport."
                  data-dataset="sportsList"
                  data-model="selectedSport"
-                 data-key="id"
-                 data-display="name"
+                 data-unique-key="id"
+                 data-display-key="name"
                  data-on-change="sportChanged(selected)">
     </fancyselect>
 </div>
 
 ```
-
 
 ## Developing
 
