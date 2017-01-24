@@ -7,7 +7,7 @@
     <div class="fancyselect-body">
         <div>
             <div ng-repeat="item in dataset" ng-click="selectItem(item)" ng-class="{ selected: isSelectedItem(item) }">
-                <span>{{key !== undefined ? item[display] : item}}</span>
+                <span>{{uniqueKey !== undefined ? item[displayKey] : item}}</span>
             </div>
         </div>
     </div>

@@ -7,16 +7,16 @@ app.directive("fancyselect", ['$rootScope','$parse',function($rootScope,$parse) 
         scope: {
             label: "@",
             dataset: "=",
-            selected: "=",
-            key: "@",
-            display: "@",
+            model: "=",
+            uniqueKey: "@",
+            displayKey: "@",
             onChange: "&"
 //            transclude: true
         },
         link: function(scope,element,attrs) {
             scope.bShowList = false;
             scope.bShowLabel = true;
-            scope.selectedItem = angular.copy(scope.selected);
+            scope.selectedItem = angular.copy(scope.model);
 
             scope.selectItem = function(item) {
                 scope.bShowLabel = false;
@@ -24,7 +24,7 @@ app.directive("fancyselect", ['$rootScope','$parse',function($rootScope,$parse) 
             };
 
             scope.isSelectedItem = function(item) {
-                return item[scope.key] === scope.selectedItem[scope.key];
+                return item[scope.uniqueKey] === scope.selectedItem[scope.uniqueKey];
             };
 
             scope.showList = function() {
@@ -41,8 +41,8 @@ app.directive("fancyselect", ['$rootScope','$parse',function($rootScope,$parse) 
             });
 
             scope.$watch("selectedItem", function(value) {
-                scope.bShowLabel = scope.selectedItem[scope.key] === undefined;
-                scope.selectedValue = scope.selectedItem[scope.display];
+                scope.bShowLabel = scope.selectedItem[scope.uniqueKey] === undefined;
+                scope.selectedValue = scope.selectedItem[scope.displayKey];
                 $parse(attrs.onChange)(scope.$parent, {selected: scope.selectedItem });
             });
         }
