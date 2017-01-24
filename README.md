@@ -2,7 +2,7 @@
 
 Customized html select directives for AngularJS.
 
-Using jquery , and font awesome for icon.
+Using font awesome for awesome icon.
 
 No other dependency required.
 
@@ -46,22 +46,7 @@ app.controller("MyController", function($scope) {
 });
 ```
 
-And in your html, specify the `dropdown-select` and `dropdown-model` attributes on an element.
 
-You can optionally set `dropdown-item-label` to specify a different label field from the default (which is 'text'):
-
-```html
-<div ng-controller="AppCtrl">
-    <h1>Dropdown Select</h1>
-    <p>You have selected: {{ddSelectSelected}}</p>
-    <div dropdown-select="ddSelectOptions"
-        dropdown-model="ddSelectSelected"
-        dropdown-item-label="text" >
-    </div>
-</div>
-```
-
-For a menu-style dropdown, use `dropdown-menu` in place of `dropdown-select`:
 
 ```html
 <html>
@@ -73,7 +58,9 @@ For a menu-style dropdown, use `dropdown-menu` in place of `dropdown-select`:
         <p>
             {{selectedSport}}
         </p>
+
         <fancyselect label="Select your favourite sport." data="sportsList" key="id" display="name" selected="selectedSport"></fancyselect>
+
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
         <script src="./app.js"></script>
@@ -83,8 +70,9 @@ For a menu-style dropdown, use `dropdown-menu` in place of `dropdown-select`:
 
 
 ```
-
-
+Key attribute is for specifying the unique attribute in json data.
+Display attribute is for specifying what is shown in dropdown.
+Try to change key and display attribute (e.g display="likes").
 
 ## Developing
 
