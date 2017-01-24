@@ -61,12 +61,12 @@ app.controller("MyController", function($scope) {
         {{selectedSport}}
     </p>
 
-    <fancyselect data-label="Select your favourite sport."
-                 data-dataset="sportsList"
-                 data-model="selectedSport"
-                 data-unique-key="id"
-                 data-display-key="name"
-                 data-on-change="sportChanged(selected)">
+    <fancyselect label="Select your favourite sport."
+                 dataset="sportsList"
+                 model="selectedSport"
+                 unique-key="id"
+                 display-key="name"
+                 on-change="sportChanged(selected)">
     </fancyselect>
 </div>
 
