@@ -3,7 +3,7 @@ var app = angular.module("fancyselect", []);
 app.directive("fancyselect", function($rootScope) {
     return {
         restrict: "E",
-        templateUrl: "./fancyselect.templ.html",
+        templateUrl: "./dist/fancyselect.templ.html",
         scope: {
             label: "@",
             data: "=",
