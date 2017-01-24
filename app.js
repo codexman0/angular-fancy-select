@@ -23,5 +23,11 @@ app.controller("MyController", function($scope) {
         name:"Wrestle",
         likes:20
     }];
-    $scope.selectedSport = {};
+
+    $scope.selectedSport = {
+    };
+
+    $scope.sportSelected = function(selectedSport){
+        $scope.selectedSport = selectedSport;
+    }
 });

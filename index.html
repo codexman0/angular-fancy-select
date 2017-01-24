@@ -1,19 +1,28 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <link rel="stylesheet" href="./dist/fancyselect.css"/>
-    </head>
-    <body ng-app="fancySelectExample" ng-controller="MyController" style="margin-left:100px; margin-top:100px;">
-        <p>
-            {{selectedSport}}
-        </p>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./dist/fancyselect.css"/>
+</head>
+<body>
+<div ng-app="fancySelectExample" ng-controller="MyController" class="fancyselect-app">
+    <p>
+        {{selectedSport}}
+    </p>
 
-        <fancyselect label="Select your favourite sport." data="sportsList" key="id" display="name" selected="selectedSport"></fancyselect>
+    <fancyselect data-label="Select your favourite sport."
+                 data-dataset="sportsList"
+                 data-key="id"
+                 data-display="name"
+                 data-selected="selectedSport"
+                 data-on-change="sportSelected(selected)">
+    </fancyselect>
+</div>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
-        <script src="./app.js"></script>
-        <script src="./dist/fancyselect.js"></script>
-    </body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="./dist/fancyselect.js"></script>
+<script src="./app.js"></script>
+</body>
 </html>
 
