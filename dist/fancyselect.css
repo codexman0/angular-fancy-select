@@ -5,7 +5,7 @@
 fancyselect {
     float: left;
     display: block;
-    width: 250px;
+    width: 300px;
 }
 
 fancyselect > div {
@@ -54,9 +54,10 @@ fancyselect > div > div.fancyselect-body {
     float: left;
     position: relative;
     width: 100%;
-    transform: scale(1, 0);
+    display:none;
+    /*transform: scale(1, 0);
     ms-transform: scale(1, 0);
-    transition: transform ease 250ms;
+    transition: transform ease 250ms;*/
 }
 fancyselect > div > div.fancyselect-body > div {
     position: absolute;
@@ -105,6 +106,7 @@ fancyselect > div > div.fancyselect-body > div > div.selected > i {
     display: inline-block;
 }
 fancyselect > div.show > div.fancyselect-body {
-    transform: scale(1, 1);
-    ms-transform: scale(1, 1);
+    display: block;
+    /*transform: scale(1, 1);
+    ms-transform: scale(1, 1);*/
 }

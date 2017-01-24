@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -10,12 +11,12 @@
         {{selectedSport}}
     </p>
 
-    <fancyselect data-label="Select your favourite sport."
-                 data-dataset="sportsList"
-                 data-model="selectedSport"
-                 data-unique-key="id"
-                 data-display-key="name"
-                 data-on-change="sportChanged(selected)">
+    <fancyselect label="Select your favourite sport."
+                 dataset="sportsList"
+                 model="selectedSport"
+                 unique-key="id"
+                 display-key="name"
+                 on-change="sportChanged(selected)">
     </fancyselect>
 </div>
 

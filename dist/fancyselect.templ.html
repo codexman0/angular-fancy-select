@@ -1,12 +1,12 @@
-<div class="fancyselect-container" ng-class="{ show: bShowList }">
-    <div class="fancyselect-display" ng-click="toggleList();" ng-class="{ clicked: bShowList }">
+<div class="fancyselect-container" data-ng-class="{ 'show': bShowList }">
+    <div class="fancyselect-display" ng-click="toggleList();" data-ng-class="{ 'clicked': bShowList }">
         <span ng-if="!bShowLabel">{{selectedValue}}</span>
         <span class="label" ng-if="bShowLabel">{{label}}</span>
         <i class="fa fa-angle-down"></i>
     </div>
     <div class="fancyselect-body">
         <div>
-            <div ng-repeat="item in dataset" ng-click="selectItem(item)" ng-class="{ selected: isSelectedItem(item) }">
+            <div ng-repeat="item in dataset" ng-click="selectItem(item)" data-ng-class="{ 'selected': isSelectedItem(item) }">
                 <span>{{uniqueKey !== undefined ? item[displayKey] : item}}</span>
             </div>
         </div>
