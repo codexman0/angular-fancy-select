@@ -1,6 +1,6 @@
 # Angular FancySelect
 
-Customized html select directives for AngularJS.
+Customized html dropdown directive for AngularJS.
 
 Using font awesome for awesome icon.
 
