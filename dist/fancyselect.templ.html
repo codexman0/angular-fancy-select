@@ -1,5 +1,5 @@
 <div class="fancyselect-container" ng-class="{ show: bShowList }">
-    <div class="fancyselect-display" ng-click="showList();" ng-class="{ clicked: bShowList }">
+    <div class="fancyselect-display" ng-click="toggleList();" ng-class="{ clicked: bShowList }">
         <span ng-if="!bShowLabel">{{selectedValue}}</span>
         <span class="label" ng-if="bShowLabel">{{label}}</span>
         <i class="fa fa-angle-down"></i>

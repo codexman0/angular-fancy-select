@@ -55,6 +55,7 @@ fancyselect > div > div.fancyselect-body {
     position: relative;
     width: 100%;
     transform: scale(1, 0);
+    ms-transform: scale(1, 0);
     transition: transform ease 250ms;
 }
 fancyselect > div > div.fancyselect-body > div {
@@ -105,4 +106,5 @@ fancyselect > div > div.fancyselect-body > div > div.selected > i {
 }
 fancyselect > div.show > div.fancyselect-body {
     transform: scale(1, 1);
+    ms-transform: scale(1, 1);
 }

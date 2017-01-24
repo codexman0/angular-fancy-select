@@ -27,8 +27,8 @@ app.directive("fancyselect", ['$rootScope','$parse',function($rootScope,$parse) 
                 return item[scope.uniqueKey] === scope.selectedItem[scope.uniqueKey];
             };
 
-            scope.showList = function() {
-                scope.bShowList = true;
+            scope.toggleList = function() {
+                scope.bShowList = !scope.bShowList;
             };
 
             angular.element(document).on("click", function(e) {
