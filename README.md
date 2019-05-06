@@ -6,7 +6,7 @@ Using font awesome for awesome icon.
 
 No other dependency required.
 
-See examples: https://svetoslav0625.github.io/angular-fancy-select/
+See examples: https://codexman0.github.io/angular-fancy-select/
 
 ## Usage
 
